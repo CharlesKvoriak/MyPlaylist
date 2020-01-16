@@ -1,0 +1,11 @@
+.song{
+  display:flex;
+  align-items:center;
+}
+
+.songArtist{
+}
+
+.inputs{
+  display:flex;
+}

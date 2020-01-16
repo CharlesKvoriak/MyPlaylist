@@ -5,15 +5,33 @@
         <!-- Your CSS -->
         <link type="text/css" rel="stylesheet" href="css/style.css" />
     </head>
-    <body>
-      <h1>Charlie's Playlist</h1>  
+    <body onload="fillDiv()">
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+      <!-- Your Javascript -->
+      <script src="js/script.js"></script>
+
+      <h1>Charlie's Playlist</h1>
+      <!-- add size attribute to inputs -->
+      <div class="inputs">
+        <div>
+          <p>song name</p>
+          <input class="songname">
+        </div>
+        <div>
+          <p>artist</p>
+          <input class="artist">
+        </div>
+        <div>
+          <p>link</p>
+          <input class="link">
+        </div>
+      </div>
+
       <div id = "songs">
         
       </div>
 
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-        <!-- Your Javascript -->
-        <script src="js/script.js"></script>
+
     </body>
 </html>
