@@ -1,20 +1,29 @@
 let songs = [
-              ["Rhythm Section Want Ad", "They Might Be Giants", "https://youtu.be/GgDB2Q_R-Tk"],
-              ["Electioneering", "Radiohead", "https://youtu.be/3DtgWrFTtQk"],
-              ["Colin Zeal", "Blur", "https://youtu.be/J1RS4JElStk"]
+              {song:"Rhythm Section Want Ad", artist:"They Might Be Giants", url:"https://youtu.be/GgDB2Q_R-Tk"},
+              {song:"Electioneering", artist:"Radiohead", url:"https://youtu.be/3DtgWrFTtQk"},
+              {song:"Colin Zeal", artist:"Blur", url:"https://youtu.be/J1RS4JElStk"}
             ];
 
+
+
 function fillDiv(){
-  console.log("test");
   $("#songs").empty;
 
   songs.forEach(function(song) {
     $("#songs").append(`<div class="song">
                     <div class="songArtist">
-                      <h3>`+song[0]+`</h3>
-                      <p>`+song[1]+`</p>
+                      <h3>`+song.song+`</h3>
+                      <p>`+song.artist+`</p>
                     </div>
-                    <a href="`+song[2]+`" target="_blank" rel="noopener noreferrer">link</a>
+                    <a href="`+song.url+`" target="_blank" rel="noopener noreferrer">link</a>
                   </div>`);
   });
 }
+
+fillDiv();
+
+$(".submit").click(function(){
+  console.log("test");
+  // songs.push({song:$(".songname".val()), artist:$(".artist".val()), url:$(".link".val())});
+  // fillDiv();
+});
