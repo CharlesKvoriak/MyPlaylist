@@ -1,3 +1,8 @@
+$(".submit").click(function(){
+  songs.push({"song":$(".songname").val(), "artist":$(".artist").val(), "url":$(".link").val()});
+  fillDiv();
+});
+
 let songs = [
               {song:"Rhythm Section Want Ad", artist:"They Might Be Giants", url:"https://youtu.be/GgDB2Q_R-Tk"},
               {song:"Electioneering", artist:"Radiohead", url:"https://youtu.be/3DtgWrFTtQk"},
@@ -7,7 +12,7 @@ let songs = [
 
 
 function fillDiv(){
-  $("#songs").empty;
+  $("#songs").empty();
 
   songs.forEach(function(song) {
     $("#songs").append(`<div class="song">
@@ -20,10 +25,6 @@ function fillDiv(){
   });
 }
 
-fillDiv();
-
-$(".submit").click(function(){
-  console.log("test");
-  // songs.push({song:$(".songname".val()), artist:$(".artist".val()), url:$(".link".val())});
-  // fillDiv();
+$(document).ready(function(){
+  fillDiv();
 });
